@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="주식회사 올빼미와수달 - 인디게임 개발사. Owl & Otter Co., Ltd. - Indie Game Studio">
+  <title>주식회사 올빼미와수달 | Owl & Otter Co., Ltd.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Desktop background -->
+  <div class="desktop" id="desktop">
+
+    <!-- Floating logo on desktop background -->
+    <div class="desktop-bg-logo" id="desktop-bg-logo">
+      <span class="ss-owl">Owl</span><span class="ss-amp">&</span><span class="ss-otter">Otter</span>
+      <span class="ss-sub">Indie Game Studio</span>
+    </div>
+
+    <!-- Footer info bar -->
+    <div class="desktop-footer" id="desktop-footer">
+      <span>주식회사 올빼미와수달 | 대표: 오영욱 | 경기도 용인시 수지구 | master@owlottergames.com</span>
+      <span>&copy; 2026 주식회사 올빼미와수달</span>
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+      <button class="start-btn" id="start-btn">
+        <span class="start-icon"></span> Start
+      </button>
+      <div class="taskbar-tray">
+        <span class="tray-item" id="clock"></span>
+      </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu" id="start-menu">
+      <div class="start-menu-sidebar">Owl&Otter</div>
+      <ul class="start-menu-list">
+        <li><a href="#about-window">회사 소개</a></li>
+        <li><a href="#games-window">게임 소개</a></li>
+        <li><a href="#contact-window">연락처</a></li>
+        <li><a href="#mine-window">지뢰찾기</a></li>
+        <li class="divider"></li>
+        <li><a href="mailto:master@owlottergames.com">메일 보내기</a></li>
+      </ul>
+    </div>
+
+    <!-- Desktop Icons -->
+    <div class="desktop-icons">
+      <button class="desktop-icon" data-target="about-window">
+        <div class="icon-img">
+          <svg viewBox="0 0 32 32" width="32" height="32">
+            <rect x="2" y="4" width="28" height="22" fill="#fff" stroke="#000" stroke-width="1"/>
+            <rect x="4" y="6" width="24" height="18" fill="#000080"/>
+            <rect x="2" y="26" width="28" height="4" fill="#c0c0c0" stroke="#000" stroke-width="1"/>
+          </svg>
+        </div>
+        <span>회사 소개.exe</span>
+      </button>
+      <button class="desktop-icon" data-target="games-window">
+        <div class="icon-img">
+          <svg viewBox="0 0 32 32" width="32" height="32">
+            <rect x="2" y="2" width="28" height="28" fill="#c0c0c0" stroke="#000" stroke-width="1"/>
+            <polygon points="12,8 12,24 26,16" fill="#000080"/>
+          </svg>
+        </div>
+        <span>게임 소개.exe</span>
+      </button>
+      <button class="desktop-icon" data-target="contact-window">
+        <div class="icon-img">
+          <svg viewBox="0 0 32 32" width="32" height="32">
+            <rect x="2" y="8" width="28" height="18" fill="#fff" stroke="#000" stroke-width="1"/>
+            <polygon points="2,8 16,20 30,8" fill="none" stroke="#000" stroke-width="1"/>
+            <rect x="2" y="8" width="28" height="18" fill="#ffffcc" stroke="#000" stroke-width="1"/>
+            <polygon points="2,8 16,19 30,8" fill="none" stroke="#000080" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <span>연락처.exe</span>
+      </button>
+      <button class="desktop-icon" data-target="mine-window">
+        <div class="icon-img">
+          <svg viewBox="0 0 32 32" width="32" height="32">
+            <rect x="2" y="2" width="28" height="28" fill="#c0c0c0" stroke="#000" stroke-width="1"/>
+            <circle cx="16" cy="16" r="7" fill="#000"/>
+            <line x1="16" y1="5" x2="16" y2="9" stroke="#000" stroke-width="2"/>
+            <line x1="16" y1="23" x2="16" y2="27" stroke="#000" stroke-width="2"/>
+            <line x1="5" y1="16" x2="9" y2="16" stroke="#000" stroke-width="2"/>
+            <line x1="23" y1="16" x2="27" y2="16" stroke="#000" stroke-width="2"/>
+            <line x1="8" y1="8" x2="11" y2="11" stroke="#000" stroke-width="2"/>
+            <line x1="21" y1="21" x2="24" y2="24" stroke="#000" stroke-width="2"/>
+            <line x1="24" y1="8" x2="21" y2="11" stroke="#000" stroke-width="2"/>
+            <line x1="11" y1="21" x2="8" y2="24" stroke="#000" stroke-width="2"/>
+            <circle cx="13" cy="13" r="2" fill="#fff" opacity="0.6"/>
+          </svg>
+        </div>
+        <span>지뢰찾기.exe</span>
+      </button>
+    </div>
+
+    <!-- Window: About -->
+    <div class="win-window" id="about-window" style="display:none;">
+      <div class="win-titlebar" data-window="about-window">
+        <span class="win-titlebar-text">회사 소개 - 올빼미와수달</span>
+        <div class="win-titlebar-buttons">
+          <button class="win-btn-minimize" data-window="about-window"></button>
+          <button class="win-btn-maximize" data-window="about-window"></button>
+          <button class="win-btn-close" data-window="about-window"></button>
+        </div>
+      </div>
+      <div class="win-menubar">
+        <span>파일(F)</span>
+        <span>편집(E)</span>
+        <span>도움말(H)</span>
+      </div>
+      <div class="win-body">
+        <div class="win-section">
+          <div class="win-logo-area">
+            <div class="win-logo-box">
+              <span class="win-logo-owl">Owl</span><span class="win-logo-amp">&</span><span class="win-logo-otter">Otter</span>
+            </div>
+            <p class="win-logo-sub">Indie Game Studio</p>
+          </div>
+        </div>
+
+        <div class="win-group">
+          <div class="win-group-label">소개</div>
+          <div class="win-group-content">
+            <p>밤을 밝히는 올빼미의 상상력과, 물 흐르듯 유연한 수달의 실행력으로 세상에 없던 게임을 만듭니다.</p>
+            <br>
+            <p><strong>올빼미 (Owl)</strong> &mdash; 밤새 빛나는 창의력. 깊은 몰입과 독창적인 시선으로 게임의 본질을 파고듭니다.</p>
+            <br>
+            <p><strong>수달 (Otter)</strong> &mdash; 물 흐르듯 유연한 실행력. 빠르게 적응하고, 끊임없이 반복하며 완성도 높은 경험을 만들어냅니다.</p>
+          </div>
+        </div>
+
+        <div class="win-statusbar">
+          <span>준비</span>
+          <span>&copy; 2026 Owl & Otter Co., Ltd.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Window: Games -->
+    <div class="win-window" id="games-window" style="display:none;">
+      <div class="win-titlebar" data-window="games-window">
+        <span class="win-titlebar-text">게임 소개</span>
+        <div class="win-titlebar-buttons">
+          <button class="win-btn-minimize" data-window="games-window"></button>
+          <button class="win-btn-maximize" data-window="games-window"></button>
+          <button class="win-btn-close" data-window="games-window"></button>
+        </div>
+      </div>
+      <div class="win-body">
+        <div class="win-dialog-content">
+          <div class="win-dialog-icon">
+            <svg viewBox="0 0 32 32" width="32" height="32">
+              <circle cx="16" cy="16" r="14" fill="#000080" stroke="#000" stroke-width="1"/>
+              <text x="16" y="22" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">i</text>
+            </svg>
+          </div>
+          <div class="win-dialog-text">
+            <p>현재 게임을 개발하고 있습니다.</p>
+            <p>곧 공개될 예정이니 기대해 주세요!</p>
+          </div>
+        </div>
+        <div class="win-dialog-buttons">
+          <button class="win-button" data-close="games-window">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Window: Contact -->
+    <div class="win-window" id="contact-window" style="display:none;">
+      <div class="win-titlebar" data-window="contact-window">
+        <span class="win-titlebar-text">연락처</span>
+        <div class="win-titlebar-buttons">
+          <button class="win-btn-minimize" data-window="contact-window"></button>
+          <button class="win-btn-maximize" data-window="contact-window"></button>
+          <button class="win-btn-close" data-window="contact-window"></button>
+        </div>
+      </div>
+      <div class="win-menubar">
+        <span>파일(F)</span>
+        <span>편집(E)</span>
+      </div>
+      <div class="win-body">
+        <div class="win-group">
+          <div class="win-group-label">개발 및 파트너십 상담</div>
+          <div class="win-group-content">
+            <p><a href="mailto:master@owlottergames.com">master@owlottergames.com</a></p>
+          </div>
+        </div>
+        <div class="win-statusbar">
+          <span>준비</span>
+          <span>owlottergames.com</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Window: Minesweeper -->
+    <div class="win-window" id="mine-window" style="display:none;">
+      <div class="win-titlebar" data-window="mine-window">
+        <span class="win-titlebar-text">지뢰찾기</span>
+        <div class="win-titlebar-buttons">
+          <button class="win-btn-minimize" data-window="mine-window"></button>
+          <button class="win-btn-maximize" data-window="mine-window"></button>
+          <button class="win-btn-close" data-window="mine-window"></button>
+        </div>
+      </div>
+      <div class="win-menubar">
+        <span class="mine-menu-game" id="mine-menu-game">게임(G)</span>
+        <span>도움말(H)</span>
+      </div>
+      <div class="win-body mine-body">
+        <div class="mine-header">
+          <div class="mine-counter" id="mine-count">010</div>
+          <button class="mine-face" id="mine-face">&#128578;</button>
+          <div class="mine-counter" id="mine-timer">000</div>
+        </div>
+        <div class="mine-board" id="mine-board"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/minesweeper.js"></script>
+</body>
+</html>
