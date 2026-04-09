@@ -330,7 +330,13 @@ a:hover {
 #games-window {
   top: 60px;
   left: 140px;
-  max-width: 360px;
+  max-width: 520px;
+}
+
+#nekomancer-window {
+  top: 70px;
+  left: 150px;
+  max-width: 420px;
 }
 
 #contact-window {
@@ -563,6 +569,77 @@ a:hover {
   color: var(--win-text);
   display: flex;
   justify-content: space-between;
+}
+
+/* === Game Card === */
+.game-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.game-icon-btn {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: var(--win-gray);
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-shadow);
+  border-right: 2px solid var(--win-shadow);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.game-icon-btn:hover {
+  background: #d4d0c8;
+}
+
+.game-icon-btn:active {
+  border-top: 2px solid var(--win-shadow);
+  border-left: 2px solid var(--win-shadow);
+  border-bottom: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-light);
+}
+
+.game-info {
+  flex: 1;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  font-family: var(--font-kr);
+}
+
+.game-links {
+  margin-top: 6px;
+  display: flex;
+  gap: 12px;
+}
+
+.game-links a {
+  font-size: 0.82rem;
+  font-family: var(--font-system);
+  padding: 2px 10px;
+  background: var(--win-gray);
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-shadow);
+  border-right: 2px solid var(--win-shadow);
+  text-decoration: none;
+  color: var(--win-text);
+}
+
+.game-links a:hover {
+  color: var(--win-link);
+}
+
+.game-links a:active {
+  border-top: 2px solid var(--win-shadow);
+  border-left: 2px solid var(--win-shadow);
+  border-bottom: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-light);
 }
 
 /* === Dialog style (Games window) === */

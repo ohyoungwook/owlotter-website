@@ -71,6 +71,13 @@ document.querySelectorAll('.desktop-icon').forEach(icon => {
   });
 });
 
+// Game icon buttons (open game windows from games list)
+document.querySelectorAll('.game-icon-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    openWindow(btn.dataset.target);
+  });
+});
+
 // Window controls
 document.querySelectorAll('.win-btn-close').forEach(btn => {
   btn.addEventListener('click', () => closeWindow(btn.dataset.window));
