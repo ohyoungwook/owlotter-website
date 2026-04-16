@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(curl -I https://ohyoungwook.github.io/owlotter-website/ 2>&1 | head -10)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(gh api:*)",
+      "Bash(python3:*)",
+      "Bash(lsof -ti:8011)",
+      "Bash(xargs kill:*)"
+    ]
+  }
+}
