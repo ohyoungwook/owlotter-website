@@ -58,16 +58,11 @@ function bringToFront(win) {
   win.classList.remove('inactive');
 }
 
-// Desktop icon double-click / click
+// Desktop icon: single click opens window (skip icons that navigate via onclick)
 document.querySelectorAll('.desktop-icon').forEach(icon => {
-  icon.addEventListener('dblclick', () => {
-    openWindow(icon.dataset.target);
-  });
-  // Single click on mobile
+  if (!icon.dataset.target) return;
   icon.addEventListener('click', () => {
-    if (window.innerWidth <= 640) {
-      openWindow(icon.dataset.target);
-    }
+    openWindow(icon.dataset.target);
   });
 });
 

@@ -128,10 +128,39 @@ a:hover {
   position: absolute;
   top: 16px;
   left: 16px;
+  right: 16px;
+  /* reserve space for footer (~30px) + taskbar (~32px) + breathing room */
+  bottom: 80px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 20px 8px;
+  align-content: flex-start;
   z-index: 1;
+  pointer-events: none;
+}
+
+.desktop-icons > * {
+  pointer-events: auto;
+}
+
+/* Shrink spacing when vertical room is tight */
+@media (max-height: 720px) {
+  .desktop-icons {
+    gap: 14px 6px;
+    bottom: 76px;
+  }
+}
+
+@media (max-height: 560px) {
+  .desktop-icons {
+    top: 10px;
+    gap: 10px 4px;
+    bottom: 72px;
+  }
+  .desktop-icon {
+    font-size: 0.72rem;
+  }
 }
 
 .desktop-icon {
@@ -768,6 +797,40 @@ a:hover {
   background: var(--win-gray);
 }
 
+.mine-footer {
+  margin-top: 10px;
+  padding: 4px 6px;
+  background: var(--win-gray);
+  border-top: 1px solid var(--win-shadow);
+  border-left: 1px solid var(--win-shadow);
+  border-bottom: 1px solid var(--win-light);
+  border-right: 1px solid var(--win-light);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mine-footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  color: var(--win-text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mine-footer-link:hover {
+  background: var(--win-blue, #000080);
+  color: #fff;
+}
+
+.mine-footer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .mine-cell {
   width: 24px;
   height: 24px;
@@ -833,7 +896,9 @@ a:hover {
   .desktop-icons {
     top: 10px;
     left: 10px;
-    gap: 16px;
+    right: 10px;
+    bottom: 72px;
+    gap: 12px 4px;
   }
 
   .desktop-icon {
