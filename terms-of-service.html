@@ -68,6 +68,24 @@
     .win-body em {
       font-style: italic;
     }
+    .win-menubar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .lang-toggle {
+      display: inline-flex;
+      gap: 6px;
+      font-size: 0.78rem;
+      padding-right: 6px;
+    }
+    .lang-toggle a {
+      color: var(--win-text, #000);
+      text-decoration: none;
+      padding: 0 4px;
+    }
+    .lang-toggle a:hover { background: #000080; color: #fff; }
+    .lang-toggle .current { font-weight: bold; }
     .taskbar {
       position: fixed;
     }
@@ -90,6 +108,11 @@
       </div>
       <div class="win-menubar">
         <span onclick="window.location.href='index.html'">Home</span>
+        <span class="lang-toggle">
+          <a href="terms-of-service-ko.html">한국어</a>
+          <span>|</span>
+          <a href="terms-of-service.html" class="current">English</a>
+        </span>
       </div>
       <div class="win-body">
 
