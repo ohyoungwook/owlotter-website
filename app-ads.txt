@@ -1,6 +1,9 @@
 # admob - spp
 google.com, pub-8270124078322153, DIRECT, f08c47fec0942fa0
 
+# admob - rotor defense
+google.com, pub-5796532103469434, DIRECT, f08c47fec0942fa0
+
 # applovin - 2026.02
 applovin.com, 236074a7598ac3333650c8ee40327fb6, DIRECT
 adyoulike.com, 2d578cf695c89ec2ba707280319d2020, RESELLER
