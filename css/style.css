@@ -368,6 +368,12 @@ a:hover {
   max-width: 420px;
 }
 
+#rotordefense-window {
+  top: 75px;
+  left: 165px;
+  max-width: 420px;
+}
+
 #contact-window {
   top: 80px;
   left: 160px;

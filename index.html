@@ -44,6 +44,7 @@
         <li><a href="#games-window">게임 소개</a></li>
         <li><a href="#contact-window">연락처</a></li>
         <li><a href="#nekomancer-window">Nekomancer</a></li>
+        <li><a href="#rotordefense-window">Rotor Defense</a></li>
         <li><a href="#mine-window">지뢰찾기</a></li>
         <li class="divider"></li>
         <li><a href="mailto:master@owlottergames.com">메일 보내기</a></li>
@@ -87,6 +88,12 @@
           <img src="assets/images/nekomancer-icon-32x32.png" alt="Nekomancer" width="32" height="32" style="image-rendering: pixelated;">
         </div>
         <span>Nekomancer.exe</span>
+      </button>
+      <button class="desktop-icon" data-target="rotordefense-window">
+        <div class="icon-img">
+          <img src="assets/images/rotordefense-icon-128x128.png" alt="Rotor Defense" width="32" height="32">
+        </div>
+        <span>RotorDefense.exe</span>
       </button>
       <button class="desktop-icon" data-target="mine-window">
         <div class="icon-img">
@@ -207,6 +214,26 @@
           </div>
         </div>
 
+        <!-- Rotor Defense -->
+        <div class="win-group">
+          <div class="win-group-label">Rotor Defense</div>
+          <div class="win-group-content">
+            <div class="game-card">
+              <button class="game-icon-btn" data-target="rotordefense-window" title="Rotor Defense 실행">
+                <img src="assets/images/rotordefense-icon-128x128.png" alt="Rotor Defense" width="48" height="48">
+              </button>
+              <div class="game-info">
+                <p>코어를 중심으로 도는 세 개의 링 위에 타워를 짓는 회전형 타워 디펜스</p>
+                <p>적은 사방에서 몰려온다. 뚫린 방향은 링을 돌려 즉시 메꾼다!</p>
+                <div class="game-links">
+                  <a href="https://apps.apple.com/kr/app/rotor-defense/id6793842617" target="_blank" rel="noopener">App Store</a>
+                  <a href="https://play.google.com/store/apps/details?id=com.owlottergames.rotordefense&hl=ko" target="_blank" rel="noopener">Google Play</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Minesweeper -->
         <div class="win-group">
           <div class="win-group-label">지뢰찾기</div>
@@ -264,6 +291,37 @@
         </div>
         <div class="win-dialog-buttons">
           <button class="win-button" data-close="nekomancer-window">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Window: Rotor Defense -->
+    <div class="win-window" id="rotordefense-window" style="display:none;">
+      <div class="win-titlebar" data-window="rotordefense-window">
+        <span class="win-titlebar-text">Rotor Defense</span>
+        <div class="win-titlebar-buttons">
+          <button class="win-btn-minimize" data-window="rotordefense-window"></button>
+          <button class="win-btn-maximize" data-window="rotordefense-window"></button>
+          <button class="win-btn-close" data-window="rotordefense-window"></button>
+        </div>
+      </div>
+      <div class="win-body">
+        <div class="win-dialog-content">
+          <div class="win-dialog-icon">
+            <img src="assets/images/rotordefense-icon-128x128.png" alt="Rotor Defense" width="32" height="32">
+          </div>
+          <div class="win-dialog-text">
+            <p><strong>Rotor Defense</strong></p>
+            <p>코어를 중심으로 도는 세 개의 링 위에 타워를 짓습니다. 적은 사방에서 몰려오고, 방어선이 뚫린 방향은 링을 돌려 즉시 메꿉니다.</p>
+            <p>레이더가 다음 웨이브의 방향을 미리 알려주기 때문에, 잘 지은 방어선을 버리지 않고 회전으로 재활용하는 것이 이 게임의 핵심 기술입니다.</p>
+            <div class="game-links">
+              <a href="https://apps.apple.com/kr/app/rotor-defense/id6793842617" target="_blank" rel="noopener">App Store</a>
+              <a href="https://play.google.com/store/apps/details?id=com.owlottergames.rotordefense&hl=ko" target="_blank" rel="noopener">Google Play</a>
+            </div>
+          </div>
+        </div>
+        <div class="win-dialog-buttons">
+          <button class="win-button" data-close="rotordefense-window">확인</button>
         </div>
       </div>
     </div>
